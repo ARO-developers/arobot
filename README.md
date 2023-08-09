@@ -35,12 +35,14 @@ If you're unable to import PIL or numpy on your CyberPi, do this:
     
     ```python
     import event, time, cyberpi
-    # from ARO_logo import generate_tiles
+    # from image_processing import generate_tiles  # if PIL or Numpy not installed, comment this line
     
     # initialize variables
     
     tiles = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9090524, 7120085, 7054549, 7054549, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7181768, 1797817, 1863353, 1863353,...], [...], ...]
-    sprites = []
+    sprite = cyberpi.sprite()
+    width = len(im_array[0])
+    height = len(im_array)
     ...
     ```
 
@@ -49,6 +51,7 @@ If you're unable to import PIL or numpy on your CyberPi, do this:
 > Note: if you want to use your own image with different dimensions, you have to change the `filepath` in `image_processing.py`:
 > 
 > ```python
+> ...
 > def generate_tiles():
 >     filepath = "./ARO_logo-removebg-preview_1.png"  # downscaled and cropped image, so it has 128x64
 >     test = "./test002.png"  # testing image ("./test001.png", "./test002.png")

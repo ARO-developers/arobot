@@ -12,6 +12,9 @@ height = len(im_array)
 # Hope it works :)
 @event.is_press('a')
 def is_btn_press():
+    if width > 128 or height > 128:
+        print("Image is too large!")
+        return
     pixels = []
     for row in im_array:
         pixels.extend(row)
