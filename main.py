@@ -20,7 +20,7 @@ def is_btn_press():
         pixels.extend(row)
     sprite.draw_pixel(pixels, width, height)
     sprite.rotate_to(angle=90)
-    sprite.move_to(64.5, 64.5)
+    sprite.move_to(64, 64)
     sprite.show()
     cyberpi.screen.render()
 
